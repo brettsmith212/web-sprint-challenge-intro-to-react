@@ -2,7 +2,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const CharacterWrapper = styled.div``;
+const CharacterContainer = styled.section`
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const CharacterWrapper = styled.div`
+  width: 15rem;
+  border: 1px solid yellow;
+  padding: 2rem;
+  margin: 2rem 0;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+`;
 
 function Character(props) {
   const { data } = props;
@@ -20,7 +36,7 @@ function Character(props) {
     );
   });
 
-  return <div>{characterArr}</div>;
+  return <CharacterContainer>{characterArr}</CharacterContainer>;
 }
 
 export default Character;
