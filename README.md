@@ -79,6 +79,17 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+   React JS is a framework on top of JavaScript that allows you to create reusable components and websites that can change data without reloading the page. This is because of the virtual DOM that is regularly compared against the real DOM to determine what needs updating. Using vanilla javascript would be very difficult for building large applications because state management is simplified in react. The state management allows you to have various states that, when change, update the DOM.
+
+2. Describe component state.
+
+   Component state is the object that determines how a component will act. It permits the components to be dynamic, or change based on new data. State is critical to react because it determines which components need to be updated in the DOM. When the state changes, the component needs to be rerendered.
+
+3. Describe props.
+
+   Props are arguments that are passed between parent / child components in react. They are passed as HTML attributes from a parent to a child component and vice versa.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+   Side effects are effects that tell your component to do something after it renders. The useEffect() hook is an example of a side effect that will run after the component renders. The useEffect will run after defined state variables change state as well, and the state variable defined in the [] of the useEffect() hook sync the effects to a certain state or prop.
