@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Character from "./components/Character";
+import styled from "styled-components";
+
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -22,10 +29,10 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
+    <PageWrapper>
+      <h1>Star Wars Characters</h1>
       <Character data={data} />
-    </div>
+    </PageWrapper>
   );
 };
 

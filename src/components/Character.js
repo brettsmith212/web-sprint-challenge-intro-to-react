@@ -8,13 +8,14 @@ function Character(props) {
   const { data } = props;
   console.log(data);
 
-  const characterArr = data.map((person) => {
+  const characterArr = data.map((person, idx) => {
     return (
-      <CharacterWrapper>
-        <p>{person.name}</p>
-        <p>{person.height}</p>
-        <p>{person.mass}</p>
-        <p>{person.hair_color}</p>
+      <CharacterWrapper key={idx}>
+        <h2>{person.name}</h2>
+        <p>Birth Year: {person.birth_year}</p>
+        <p>Gender: {person.gender}</p>
+        <p>Height: {person.height}</p>
+        <p>Mass: {person.mass}</p>
       </CharacterWrapper>
     );
   });
